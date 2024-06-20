@@ -1,4 +1,4 @@
-const API_URL = 'https://www.omdbapi.com/';
+const API_URL = 'https://www.omdbapis.com/';
 const API_KEY = 'b83de95d';
 
 export const fetchMovies = async (query) => {
