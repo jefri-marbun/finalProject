@@ -1,3 +1,9 @@
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
 .movie-card {
   border: none;
   border-radius: 10px;
@@ -6,7 +12,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 100%; /* Pastikan kartu mengambil seluruh tinggi kolom */
+  height: 100%;
 }
 
 .movie-card:hover {
@@ -15,7 +21,7 @@
 
 .movie-card .image-container {
   width: 100%;
-  height: 300px; /* Tetapkan tinggi tetap untuk gambar */
+  height: 400px; /* Tetapkan tinggi tetap untuk gambar */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -23,8 +29,9 @@
 }
 
 .movie-card .image-container img {
+  width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Memastikan gambar menutupi seluruh container dengan proporsi yang benar */
 }
 
 .movie-card .card-body {

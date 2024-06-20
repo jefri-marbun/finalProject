@@ -6,9 +6,11 @@ const HomePage = ({ movies, loading, error }) => {
     <div className="container mt-4">
       {loading && <div className="text-center"><p>Loading...</p></div>}
       {error && <div className="text-center"><p>Error: {error}</p></div>}
+      
       {!loading && !error && movies.length === 0 && (
-        <div className="text-center"><p>No movies found</p></div>
+        <div className="text-center"><p>Movies not found</p></div>
       )}
+
       <div className="row">
         <MovieList movies={movies} />
       </div>
