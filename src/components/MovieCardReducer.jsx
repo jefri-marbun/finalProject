@@ -39,7 +39,7 @@ const MovieCard = () => {
     const fetchMovies = async () => {
       dispatch({ type: 'FETCH_MOVIES_REQUEST' });
       try {
-        const response = await fetch(`https://www.omdbapi.com/?s=Anime&apikey="your api key here"`);
+        const response = await fetch(`https://www.omdbapi.com/?s=Anime&apikey="enter your api key here"`);
         const data = await response.json();
         if (data.Response === 'True') {
           dispatch({ type: 'FETCH_MOVIES_SUCCESS', payload: data.Search });
@@ -59,7 +59,7 @@ const MovieCard = () => {
   return (
     <div className="container mt-4">
       {loading && <div className="text-center"><p>Loading...</p></div>}
-      {error && <div className="text-center"><p>Error: {error}</p></div>}
+      {error && <div className="text-center"><p>Enter API KEY : {error}</p></div>}
       {!loading && !error && movies.length === 0 && (
         <div className="text-center"><p>No movies found</p></div>
       )}
